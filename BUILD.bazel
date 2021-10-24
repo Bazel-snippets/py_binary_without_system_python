@@ -1,0 +1,19 @@
+load("@rules_python//python:defs.bzl", "py_runtime_pair", "py_binary")
+
+package(default_visibility = ['//visibility:public'])
+
+py_runtime_pair(
+    name = "tab_python_runtime_pair",
+    py3_runtime = "//thirdparty/python:tab_python_runtime",
+)
+
+toolchain(
+    name = "tab_python_toolchain",
+    toolchain = ":tab_python_runtime_pair",
+    toolchain_type = "@bazel_tools//tools/python:toolchain_type",
+)
+
+py_binary(
+    name = "sample",
+    srcs = ["sample.py"],
+)
