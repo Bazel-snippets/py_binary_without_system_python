@@ -4,7 +4,7 @@ package(default_visibility = ['//visibility:public'])
 
 py_runtime_pair(
     name = "tab_python_runtime_pair",
-    py3_runtime = "//thirdparty/python:tab_python_runtime",
+    py3_runtime = "//python:tab_python_runtime",
 )
 
 toolchain(

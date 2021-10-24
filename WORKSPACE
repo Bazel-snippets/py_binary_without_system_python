@@ -17,21 +17,21 @@ http_archive(
 
 http_archive_local(
     name = "python_windows",
-    build_file = "//thirdparty/python:python_windows.BUILD",
+    build_file = "//python:python_windows.BUILD",
     src = "//python:cpython-3.10.0-i686-pc-windows-msvc-shared-pgo-20211017T1616.zip",
     strip_prefix = "python/install",
 )
 
 http_archive_local(
     name = "python_osx",
-    build_file = "//thirdparty/python:python_posix.BUILD",
+    build_file = "//python:python_posix.BUILD",
     src = "//python:cpython-3.10.0-aarch64-apple-darwin-pgo+lto-20211017T1616.zip",
     strip_prefix = "python/install",
 )
 
 http_archive_local(
     name = "python_linux",
-    build_file = "//thirdparty/python:python_posix.BUILD",
+    build_file = "//python:python_posix.BUILD",
     src = "//python:cpython-3.10.0-i686-unknown-linux-gnu-pgo+lto-20211017T1616.zip",
     strip_prefix = "python/install",
 )
